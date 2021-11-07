@@ -1,0 +1,25 @@
+a = 10
+b = 'sasi'
+print(a)
+print(b)
+
+## Data types
+
+##int
+a = 2
+print (a)
+
+##float
+b = 4.5
+print (b)
+
+##complex
+c = 2+9j
+print (c)
+
+##type conversion
+d = float(a)
+print(d)
+
+e = int(b)
+print(e)

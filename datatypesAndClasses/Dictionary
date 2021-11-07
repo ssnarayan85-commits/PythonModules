@@ -1,0 +1,82 @@
+## Dictionary
+
+dict_nameAge = {"key":"value"}
+dictx = {} ## empty dictionary
+
+dict_nameAge = {"shree": 25, "Vasu" : 45, "Meenu":34}
+print ("dict =", dict_nameAge)
+
+dict_nameAge["neetu"] = 47 ## Adding a value
+print (" after adding =", dict_nameAge)
+
+new_dict2 = dict_nameAge.copy() ##copy
+print ("new_dict2 =", new_dict2)
+
+print ("length =", new_dict2.__len__()) ##finding a length
+
+##Referencing another dictionary within one
+dict_parChild = {"mom1": "shree", "mom2":"Vasu", "mom3":"meenu"}
+print("Age of Vasu:", dict_nameAge[dict_parChild["mom2"]])
+
+## Keys are immutable (cannot be modified), hence tuples can be used and no lists or dictionaries can be used
+## Values could be lists or even complex lists and can be of any data types.
+
+##Using Tupes and lists as keys:
+dict3 = {(1,2,3):"abc"}
+print ("Using tuples as keys:", dict3)
+
+'''
+dict4 = {[3,4,5]: "def"}
+print ("Using lists as key:", dict4) ## will throw an error
+## TypeError: unhashable type: 'list'
+'''
+
+##deleting a key from a dictionary
+
+del dict_nameAge["neetu"]
+
+print ("Origial dict=", dict_nameAge, "\n", "copied dict =", new_dict2)
+
+if "Vasu" in dict_nameAge:
+    print ("Vasu exists in dict_nameAge")
+
+if "neetu" not in dict_nameAge:
+    print ("neetu is not in dict_nameAge")
+
+## pop and popitem()
+# dictionary.pop() pops out the specified key and value and returns the corresponding 'value'
+
+pop_dict = new_dict2.pop("neetu")
+print ("Popped or removed element =", pop_dict)
+
+##if the Key is not found to be removed/popped, a default value can be specified which will be used as a return value.
+
+pop_dict = new_dict2.pop("neetu", "default_val")
+print ("default return value for pop = ", pop_dict)
+
+# popitem() removes any randon key/value from the specified dictionary
+
+print ("Before popitem new_dict2 =", new_dict2)
+(key2, val2) = new_dict2.popitem()
+print ("After popitem new_dict2=" ,new_dict2, " and removed key/val =", key2, val2)
+
+##to empty the dictionary
+new_dict2.clear()
+print ("after clearing =", new_dict2)
+
+##Iterating over the dict
+
+for key in dict_nameAge:
+    print("printing value of key ", key, "=" ,dict_nameAge[key])
+
+##OR
+#for value in dict_nameAge.values()
+for key in dict_nameAge.keys():
+    print ("keys =", key)
+
+##update() merges the keys and values of one dictionary in to another
+knowledge = {"pers1": "Unix", "pers2":"Perl"}
+knowledge1 = {"pers1": "Unix , python"}
+knowledge.update(knowledge1)
+print ("knowledge after merge/update =", knowledge)
+

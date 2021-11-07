@@ -1,0 +1,46 @@
+##Define a list
+tasks = ['coding', 'testing', 'delivery', 'deploy']
+
+##print a list
+print(tasks)
+
+##Update a list
+tasks[2] = 'review'
+print(tasks)
+
+##length of alist
+print( len(tasks))
+
+##slicing a list
+
+##insert
+tasks.insert(0,'Analysis')
+print("insert analysis at 0 = ", tasks)
+
+
+##indexing
+print("index of testing=", tasks.index('testing'))
+
+##print a part/range of list
+print ("slicing of tasks = ", tasks [0:2])
+
+##concatenation of list ot similar to extend
+lists1 = ['delivery', 'closure']
+print( tasks + lists1)
+
+##print muliple times or called repetition
+print (lists1 * 2)
+
+##reverses a lists
+lists1.reverse() ##--> should be in a separate line
+print("reverse of lists1 = ", lists1)
+
+'''
+lists1.append(value)
+lists1.extend(lists1)
+lists1.pop() -->pops out the last value and prints out the rest
+lists1.insert(index,value)
+lists1.remove(value)
+lists1.reverse() --> reverses a lists
+lists1.sort()
+'''
