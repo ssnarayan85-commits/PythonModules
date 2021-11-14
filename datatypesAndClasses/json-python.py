@@ -33,6 +33,7 @@ print(py_countries_list[1])
 
 with open ("C:\\SparkScala\\inputData\\usa.json") as usaFP:
     python_obj = json.load(usaFP)
+/**end of file**/
 
 print(type(python_obj))
 print(python_obj['languages'])
